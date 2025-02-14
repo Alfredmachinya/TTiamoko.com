@@ -33,6 +33,13 @@
         margin-bottom: 20px;
     }
 
+    .countdown-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
     .countdown {
         display: flex;
         justify-content: center;
@@ -45,10 +52,6 @@
         padding: 10px;
         background: rgba(255, 255, 255, 0.8); /* Increase transparency for better visibility */
         border-radius: 5px;
-    }
-
-    .event-date {
-        font-size: 1.2em;
     }
 
     .register-button {
@@ -81,12 +84,14 @@
 <body>
     <div class="background">
         <div class="countdown-container container">
-            <div class="countdown">
+            <div class="countdown-content">
                 <h1>Upcoming Event at Tiamoko Centre</h1>
-                <div class="time-unit" id="days"></div>
-                <div class="time-unit" id="hours"></div>
-                <div class="time-unit" id="minutes"></div>
-                <div class="time-unit" id="seconds"></div>
+                <div class="countdown">
+                    <div class="time-unit" id="days"></div>
+                    <div class="time-unit" id="hours"></div>
+                    <div class="time-unit" id="minutes"></div>
+                    <div class="time-unit" id="seconds"></div>
+                </div>
                 <button class="register-button">Register Now</button>
             </div>
             <div class="image-container">
