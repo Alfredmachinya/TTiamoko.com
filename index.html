@@ -6,54 +6,60 @@
     <title>Tiamoko Centre Event</title>
     <style>
       body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    color: white;
-    background-image: url('background.png'); /* Replace with your background image path */
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+        margin: 0;
+        font-family: Arial, sans-serif;
+        color: white;
+        background-image: url('background.png'); /* Replace with your background image path */
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
-.container {
-    text-align: center;
-    background: rgba(0, 0, 0, 0.7);
-    padding: 20px;
-    border-radius: 10px;
-}
+    .container {
+        text-align: center;
+        background: rgba(0, 0, 0, 0.7);
+        padding: 20px;
+        border-radius: 10px;
+    }
 
-h1 {
-    margin-bottom: 20px;
-}
+    h1 {
+        color: black; /* Change h1 text color to black */
+        margin-bottom: 20px;
+    }
 
-.countdown {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-}
+    .countdown {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
 
-.time-unit {
-    margin: 0 10px;
-    font-size: 2em;
-    padding: 10px;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 5px;
-}
+    .time-unit {
+        margin: 0 10px;
+        font-size: 2em;
+        padding: 10px;
+        background: rgba(255, 255, 255, 0.6); /* Increase transparency for better visibility */
+        border-radius: 5px;
+    }
 
-.event-date {
-    font-size: 1.2em;
-}
-
+    .event-date {
+        font-size: 1.2em;
+    }
     </style>
 </head>
 <body>
     <div class="background">
-        <div class="countdown-container">
+        <div class="countdown-container container">
             <h1>Upcoming Event at Tiamoko Centre</h1>
-            <p id="countdown"></p>
+            <div class="countdown">
+                <div class="time-unit" id="days"></div>
+                <div class="time-unit" id="hours"></div>
+                <div class="time-unit" id="minutes"></div>
+                <div class="time-unit" id="seconds"></div>
+            </div>
+            <p class="event-date">April 05, 2025</p>
         </div>
     </div>
     <script>
