@@ -35,13 +35,12 @@
 
     .countdown {
         display: flex;
-        flex-direction: column;
         justify-content: center;
         margin-bottom: 20px;
     }
 
     .time-unit {
-        margin: 10px 0;
+        margin: 0 10px;
         font-size: 2em;
         padding: 10px;
         background: rgba(255, 255, 255, 0.8); /* Increase transparency for better visibility */
@@ -60,6 +59,7 @@
         border-radius: 5px;
         cursor: pointer;
         font-size: 1em;
+        margin-top: 20px;
     }
 
     .register-button:hover {
@@ -73,7 +73,8 @@
 
     .image-container img {
         width: 100%;
-        border-radius: 10px;
+        height: auto;
+        border-radius: 50%; /* Make image circular */
     }
     </style>
 </head>
@@ -81,7 +82,7 @@
     <div class="background">
         <div class="countdown-container container">
             <div class="countdown">
-                <h1>Future Ready Employment Summit</h1>
+                <h1>Upcoming Event at Tiamoko Centre</h1>
                 <div class="time-unit" id="days"></div>
                 <div class="time-unit" id="hours"></div>
                 <div class="time-unit" id="minutes"></div>
