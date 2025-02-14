@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiamoko Centre Event</title>
+    <style>
+      body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+    background-image: url('background.jpg'); /* Replace with your background image path */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.time-unit {
+    margin: 0 10px;
+    font-size: 2em;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+.event-date {
+    font-size: 1.2em;
+}
+
+    </style>
+</head>
+<body>
+    <div class="background">
+        <div class="countdown-container">
+            <h1>Upcoming Event at Tiamoko Centre</h1>
+            <p id="countdown"></p>
+        </div>
+    </div>
+    <script>
+      const eventDate = new Date("April 05, 2025 10:00:00").getTime();
+
+const countdownFunction = setInterval(() => {
+    const now = new Date().getTime();
+    const distance = eventDate - now;
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("days").innerHTML = days + "d";
+    document.getElementById("hours").innerHTML = hours + "h";
+    document.getElementById("minutes").innerHTML = minutes + "m";
+    document.getElementById("seconds").innerHTML = seconds + "s";
+
+    if (distance < 0) {
+        clearInterval(countdownFunction);
+        document.getElementById("countdown").innerHTML = "Event Started!";
+    }
+}, 1000);
+
+    </script>
+</body>
+</html>
