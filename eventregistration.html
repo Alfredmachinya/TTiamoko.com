@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Event Registration</title>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("machinyaalfred05@gmail.com"); // Replace "YOUR_USER_ID" with your actual EmailJS user ID
+        })();
+    </script>
     <style>
       body {
         font-family: Arial, sans-serif;
@@ -76,9 +82,17 @@
         margin-top: 0;
     }
 
+    .back-icon {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        font-size: 24px;
+        cursor: pointer;
+    }
     </style>
 </head>
 <body>
+    <div class="back-icon" onclick="window.location.href='index.html'">&#8592; Back</div>
     <div class="form-container">
         <div class="form-content">
             <h1>Event Registration</h1>
@@ -110,10 +124,9 @@
             <h2>Payment Process</h2>
             <p>Please complete the payment to the following bank account:</p>
             <ul>
-                <li>Account Name: Tiamoko Centre</li>
-                <li>Account Number: 123456789</li>
-                <li>Bank: XYZ Bank</li>
-                <li>Branch: Gaborone</li>
+                <li>Account Name: TiaMoko Entrepreneurship & Leadership Centre </li>
+                <li>Account Number: +267 75 091 452</li>
+                <li>Bank: Orange money</li>
             </ul>
             <p>After completing the payment, take a clear photo or screenshot of your payment receipt and upload it using the form on the left. Once we verify your payment, you will receive a confirmation email.</p>
         </div>
@@ -135,8 +148,25 @@
             return;
         }
 
-        // Here you would normally send the data to the server or handle it as needed
-        alert('Registration successful! Payment proof submitted.');
+        // Prepare email data
+        const emailData = {
+            from_name: name,
+            from_email: email,
+            phone: phone,
+            address: address,
+            payment_proof: paymentProof.name
+        };
+
+        // Send email using EmailJS
+        emailjs.send('machinyaalfred05@gmail.com', 'YOUR_TEMPLATE_ID', emailData)
+            .then(function(response) {
+                console.log('SUCCESS!', response.status, response.text);
+                alert('Registration successful! Payment proof submitted.');
+                window.location.reload();
+            }, function(error) {
+                console.log('FAILED...', error);
+                alert('Failed to send the registration information. Please try again.');
+            });
     });
 
     </script>
