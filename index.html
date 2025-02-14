@@ -75,22 +75,33 @@
         cursor: pointer;
         font-size: 1em;
         margin-top: 20px;
-        align-self: center; /* Center the button */
+        margin-left: 20px; /* Move the button to the left */
     }
 
     .register-button:hover {
         background-color: #e68900;
     }
 
-    .logo-container, .menu-button-container {
+    .right-content {
         display: flex;
         flex-direction: column;
         align-items: center;
         margin-left: 20px;
-        animation: moveUp 1s ease-out; /* Animation for logo and button */
+        animation: moveUpAndOut 3s linear infinite; /* Animation for right content */
     }
 
-    .logo-container img {
+    @keyframes moveUpAndOut {
+        0% {
+            transform: translateY(100%);
+            opacity: 1;
+        }
+        100% {
+            transform: translateY(-100%);
+            opacity: 0;
+        }
+    }
+
+    .logo-container img, .additional-image {
         width: 100px;
         height: auto;
         margin-bottom: 20px;
@@ -124,17 +135,22 @@
                 </div>
                 <button class="register-button">Register Now</button>
             </div>
-            
         </div>
     </div>
     <div class="right-content">
-                <div class="logo-container">
-                    <img src="logo.png" alt="Logo"> <!-- Replace with your logo image path -->
-                </div>
-                <div class="menu-button-container">
-                    <button class="menu-button">Menu Page</button>
-                </div>
-            </div>
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo"> <!-- Replace with your logo image path -->
+        </div>
+        <div class="additional-image">
+            <img src="logo.png" alt="Additional Image 1"> 
+        </div>
+        <div class="additional-image">
+            <img src="logo.png" alt="Additional Image 2"> 
+        </div>
+        <div class="menu-button-container">
+            <button class="menu-button">Menu Page</button>
+        </div>
+    </div>
     <script>
       const eventDate = new Date("April 05, 2025 10:00:00").getTime();
 
