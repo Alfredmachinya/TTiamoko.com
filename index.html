@@ -26,6 +26,18 @@
         padding: 20px;
         border-radius: 10px;
         width: 80%;
+        animation: moveUp 1s ease-out; /* Animation for the container */
+    }
+
+    @keyframes moveUp {
+        from {
+            transform: translateY(100px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
     }
 
     h1 {
@@ -63,10 +75,39 @@
         cursor: pointer;
         font-size: 1em;
         margin-top: 20px;
+        align-self: center; /* Center the button */
     }
 
     .register-button:hover {
         background-color: #e68900;
+    }
+
+    .logo-container, .menu-button-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 20px;
+        animation: moveUp 1s ease-out; /* Animation for logo and button */
+    }
+
+    .logo-container img {
+        width: 100px;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .menu-button {
+        padding: 10px 20px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1em;
+    }
+
+    .menu-button:hover {
+        background-color: #45a049;
     }
     </style>
 </head>
@@ -82,6 +123,14 @@
                     <div class="time-unit" id="seconds"></div>
                 </div>
                 <button class="register-button">Register Now</button>
+            </div>
+            <div class="right-content">
+                <div class="logo-container">
+                    <img src="logo.png" alt="Logo"> <!-- Replace with your logo image path -->
+                </div>
+                <div class="menu-button-container">
+                    <button class="menu-button">Menu Page</button>
+                </div>
             </div>
         </div>
     </div>
