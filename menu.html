@@ -74,30 +74,20 @@
             color: #666;
         }
 
-        .slides-container {
-            width: 100%;
-            overflow: hidden;
-            position: relative;
+        .service {
+            margin-top: 50px;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
         }
 
-        .slide {
-            width: 100%;
-            height: 100px;
-            position: absolute;
-            top: 0;
-            left: 100%;
-            opacity: 0;
-            transition: all 1s ease-in-out;
+        .service h2 {
+            color: #333;
         }
 
-        .slide.active {
-            left: 0;
-            opacity: 1;
-        }
-
-        .slide.exit {
-            left: -100%;
-            opacity: 0;
+        .service p {
+            color: #666;
         }
     </style>
 </head>
@@ -120,49 +110,11 @@
     <div class="content">
         <h1>Welcome to Tiamoko Leadership Center</h1>
         <p>Your journey to leadership excellence starts here with us.</p>
-    </div>
 
-    <div class="slides-container">
-        <div class="slide active" id="slide1">
+        <div class="service">
             <h2>Leadership Training</h2>
-            <p>Empowering individuals with the skills to lead and inspire others.</p>
-        </div>
-        <div class="slide" id="slide2">
-            <h2>Team Building</h2>
-            <p>Enhancing teamwork and collaboration through interactive activities.</p>
-        </div>
-        <div class="slide" id="slide3">
-            <h2>Mentorship Programs</h2>
-            <p>Providing guidance and support for personal and professional growth.</p>
-        </div>
-        <div class="slide" id="slide4">
-            <h2>Workshops & Seminars</h2>
-            <p>Offering a range of topics to broaden knowledge and skills.</p>
-        </div>
-        <div class="slide" id="slide5">
-            <h2>Consulting Services</h2>
-            <p>Helping organizations achieve their goals through expert advice.</p>
+            <p>Empowering individuals with the skills to lead and inspire others. Our comprehensive leadership training programs are designed to help you develop the essential qualities and competencies needed to excel in any leadership role.</p>
         </div>
     </div>
-
-    <script>
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.slide');
-
-        function showSlide(index) {
-            slides[currentSlide].classList.remove('active');
-            slides[currentSlide].classList.add('exit');
-            currentSlide = index;
-            if (currentSlide >= slides.length) {
-                currentSlide = 0;
-            }
-            slides[currentSlide].classList.remove('exit');
-            slides[currentSlide].classList.add('active');
-        }
-
-        setInterval(() => {
-            showSlide(currentSlide + 1);
-        }, 3000);
-    </script>
 </body>
 </html>
