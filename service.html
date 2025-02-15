@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiamoko services</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+            height: 60px; 
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar .logo {
+            display: inline-block;
+            padding: 5px 10px;
+        }
+
+        .navbar .logo img {
+            height: 40px; 
+            border-radius: 50%; 
+        }
+
+        .navbar .nav-links {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            margin-left: auto;
+        }
+
+        .navbar .nav-links li {
+            position: relative;
+        }
+
+        .navbar .nav-links li a {
+            display: inline-block;
+            color: white;
+            padding: 10px 15px; 
+            text-decoration: none;
+            text-align: center;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+
+        .navbar .nav-links li a:hover {
+            background-color: #575757;
+            border-radius: 8px;
+        }
+
+        .container {
+            display: flex;
+            background-color: white;
+            margin: 20px auto;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            max-width: 800px;
+            align-items: center;
+        }
+
+        .container img {
+            width: 150px;
+            height: 150px;
+            border-radius: 8px;
+            margin-right: 20px;
+        }
+
+        .description {
+            flex: 1;
+        }
+
+        .description h2 {
+            margin: 0 0 10px;
+            color: #333;
+        }
+
+        .description p {
+            color: #666;
+            margin: 0 0 20px;
+        }
+
+        .description button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .description button:hover {
+            background-color: #575757;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="tiamokologo.jpg" alt="Tiamoko Leadership Center Logo"> 
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Our Services</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="join.html">Join Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <img src="tiamokologo.jpg" alt="Leadership Training">
+        <div class="description">
+            <h2>Leadership Training</h2>
+            <p>Empowering individuals with the skills to lead and inspire others. Our comprehensive leadership training programs are designed to help you develop the essential qualities and competencies needed to excel in any leadership role.</p>
+            <button>Read More</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <img src="background.png" alt="Team Building">
+        <div class="description">
+            <h2>Team Building</h2>
+            <p>Enhancing teamwork and collaboration through interactive activities. Our team-building programs are crafted to improve communication, foster trust, and strengthen the bonds among team members.</p>
+            <button>Read More</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <img src="mentorship.jpg" alt="Mentorship Programs">
+        <div class="description">
+            <h2>Mentorship Programs</h2>
+            <p>Providing guidance and support for personal and professional growth. Our mentorship programs connect you with experienced leaders who offer valuable insights and advice.</p>
+            <button>Read More</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <img src="workshops.jpg" alt="Workshops & Seminars">
+        <div class="description">
+            <h2>Workshops & Seminars</h2>
+            <p>Offering a range of topics to broaden knowledge and skills. Our workshops and seminars are led by experts who share their knowledge and experiences to help you grow and succeed.</p>
+            <button>Read More</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <img src="consulting.jpg" alt="Consulting Services">
+        <div class="description">
+            <h2>Consulting Services</h2>
+            <p>Helping organizations achieve their goals through expert advice. Our consulting services provide customized solutions to address your unique challenges and opportunities.</p>
+            <button>Read More</button>
+        </div>
+    </div>
+</body>
+</html>
