@@ -59,20 +59,32 @@
 
         .container {
             padding: 20px;
-            max-width: 800px; /* Reduce the width of the container */
+            max-width: 800px;
             margin: auto;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
         }
 
-        h1 {
+        h1, h2 {
             text-align: center;
             color: #333;
         }
 
         p {
-            line-height: 1.8; /* Increase line-height for better readability */
+            line-height: 1.8;
             color: #666;
         }
 
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .background {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            padding: 60px 20px;
+        }
     </style>
 </head>
 <body>
@@ -91,31 +103,49 @@
         </ul>
     </nav>
 
-    <div class="container">
-        <h1>About TiaMoko Entrepreneurship & Leadership Centre</h1>
-        <p>
-            At TiaMoko Entrepreneurship & Leadership Centre, we are dedicated to fostering the next generation of entrepreneurs and leaders. Our mission is to empower individuals with the skills, knowledge, and confidence they need to make a positive impact in their communities and beyond.
-        </p>
-        <p>
-            Founded in 2025, our centre has been at the forefront of entrepreneurial education and leadership training. Over the years, we have successfully guided numerous individuals in turning their ideas into thriving businesses. Our tailored programs address various aspects of entrepreneurship, from business planning and marketing strategies to financial management and innovation.
-        </p>
-        <p>
-            Our core values are integrity, innovation, and inclusivity. We believe that by nurturing a diverse and inclusive environment, we can inspire creativity and drive positive change. Our team comprises experienced professionals and industry experts who are passionate about mentoring and developing aspiring entrepreneurs. We strive to create a supportive community where everyone feels valued and encouraged to share their unique perspectives.
-        </p>
-        <p>
-            We offer a range of programs, including:
-            <ul>
-                <li><strong>Entrepreneurship Workshops:</strong> Hands-on workshops covering essential business skills and knowledge.</li>
-                <li><strong>Leadership Training:</strong> Programs designed to develop effective leadership qualities and decision-making skills.</li>
-                <li><strong>Mentorship Programs:</strong> One-on-one mentoring with experienced entrepreneurs to guide you through your journey.</li>
-                <li><strong>Networking Events:</strong> Opportunities to connect with like-minded individuals and industry professionals.</li>
-                <li><strong>Innovation Labs:</strong> A space to experiment with new ideas and technologies, fostering creativity and innovation.</li>
-            </ul>
-        </p>
-        <p>
-            Join us at TiaMoko Entrepreneurship & Leadership Centre and be part of a vibrant community committed to excellence and growth. Together, we can build a brighter future. Whether you are just starting your entrepreneurial journey or looking to enhance your leadership skills, our programs are designed to meet your needs and help you achieve your goals.
-        </p>
-    </div>
+    <div class="background">
+        <div class="container">
+            <h1>About TiaMoko Entrepreneurship & Leadership Centre</h1>
+            
+            <div class="section">
+                <h2>Our Mission</h2>
+                <p>
+                    At TiaMoko Entrepreneurship & Leadership Centre, we are dedicated to fostering the next generation of entrepreneurs and leaders. Our mission is to empower individuals with the skills, knowledge, and confidence they need to make a positive impact in their communities and beyond.
+                </p>
+            </div>
 
+            <div class="section">
+                <h2>Our History</h2>
+                <p>
+                    Founded in 2025, our centre has been at the forefront of entrepreneurial education and leadership training. Over the years, we have successfully guided numerous individuals in turning their ideas into thriving businesses. Our tailored programs address various aspects of entrepreneurship, from business planning and marketing strategies to financial management and innovation.
+                </p>
+            </div>
+
+            <div class="section">
+                <h2>Our Core Values</h2>
+                <p>
+                    Our core values are integrity, innovation, and inclusivity. We believe that by nurturing a diverse and inclusive environment, we can inspire creativity and drive positive change. Our team comprises experienced professionals and industry experts who are passionate about mentoring and developing aspiring entrepreneurs. We strive to create a supportive community where everyone feels valued and encouraged to share their unique perspectives.
+                </p>
+            </div>
+
+            <div class="section">
+                <h2>Our Programs</h2>
+                <ul>
+                    <li><strong>Entrepreneurship Workshops:</strong> Hands-on workshops covering essential business skills and knowledge.</li>
+                    <li><strong>Leadership Training:</strong> Programs designed to develop effective leadership qualities and decision-making skills.</li>
+                    <li><strong>Mentorship Programs:</strong> One-on-one mentoring with experienced entrepreneurs to guide you through your journey.</li>
+                    <li><strong>Networking Events:</strong> Opportunities to connect with like-minded individuals and industry professionals.</li>
+                    <li><strong>Innovation Labs:</strong> A space to experiment with new ideas and technologies, fostering creativity and innovation.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Join Us</h2>
+                <p>
+                    Join us at TiaMoko Entrepreneurship & Leadership Centre and be part of a vibrant community committed to excellence and growth. Together, we can build a brighter future. Whether you are just starting your entrepreneurial journey or looking to enhance your leadership skills, our programs are designed to meet your needs and help you achieve your goals.
+                </p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
