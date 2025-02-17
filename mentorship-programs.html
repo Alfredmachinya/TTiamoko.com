@@ -9,7 +9,16 @@
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
             margin: 0;
-            padding: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
         }
 
         .back-icon {
@@ -32,10 +41,22 @@
             background-color: #ddd;
         }
 
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .content {
+            margin-top: 20px;
+            line-height: 1.6;
+            color: #555;
+        }
+
         .image-gallery {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
+            margin-top: 20px;
         }
 
         .image-gallery img {
@@ -55,17 +76,38 @@
 <body>
     <a href="service.html" class="back-icon">&larr; Back</a>
 
-  
-            <div class="image-gallery">
-                <img src="tiamokologo.jpg" alt="Leadership Training Image 1">
-                <img src="background.png" alt="Leadership Training Image 2">
-                <img src="tiamokologo.jpg" alt="Leadership Training Image 3">
-                <img src="tiamokologo.jpg" alt="Leadership Training Image 4">
-                <img src="tiamokologo.jpg" alt="Leadership Training Image 1">
-                <img src="background.png" alt="Leadership Training Image 2">
-                <img src="tiamokologo.jpg" alt="Leadership Training Image 3">
-                <img src="tiamokologo.jpg" alt="Leadership Training Image 4">
-            </div>
+    <div class="container">
+        <h1>Mentorship Program</h1>
+
+        <div class="content">
+            <p>Welcome to our Mentorship Program! Our program is designed to foster leadership, growth, and personal development through meaningful mentorship relationships. Here, you'll find an array of resources and opportunities to connect with experienced mentors who are eager to share their knowledge and guide you on your journey.</p>
+            
+            <p>Whether you're seeking guidance in your career, looking to build new skills, or simply want someone to provide support and encouragement, our mentorship program is here to help you achieve your goals. Explore our gallery to see highlights from past mentorship events and activities.</p>
+            
+            <p>Ready to get started? Contact us today to learn more about how you can become a mentor or find a mentor that's right for you.</p>
+
+            <h2>Program Highlights</h2>
+            <ul>
+                <li>Comprehensive career guidance and support</li>
+                <li>Skill-building workshops and activities</li>
+                <li>Personalized mentorship matches</li>
+                <li>Networking opportunities with industry professionals</li>
+                <li>Access to exclusive resources and materials</li>
+            </ul>
+
+            <h2>Upcoming Events</h2>
+            <ul>
+                <li>Future Ready Employment Summit - April 05, 2025</li>
+                <li>Career Fair - April 10, 2025</li>
+                <li>Networking Event - May 5, 2025</li>
+            </ul>
+        </div>
+
+        <div class="image-gallery">
+            <img src="tiamokologo.jpg" alt="Leadership Training Image 1">
+            <img src="background.png" alt="Leadership Training Image 2">
+            <img src="tiamokologo.jpg" alt="Leadership Training Image 3">
+            <img src="tiamokologo.jpg" alt="Leadership Training Image 4">
         </div>
     </div>
 </body>
