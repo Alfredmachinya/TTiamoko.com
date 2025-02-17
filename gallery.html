@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Tiamoko Leadership Centre</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+            height: 60px;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar .logo {
+            display: inline-block;
+            padding: 5px 10px;
+        }
+
+        .navbar .logo img {
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        .navbar .nav-links {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            margin-left: auto;
+        }
+
+        .navbar .nav-links li {
+            position: relative;
+        }
+
+        .navbar .nav-links li a {
+            display: inline-block;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            text-align: center;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+
+        .navbar .nav-links li a:hover {
+            background-color: #575757;
+            border-radius: 8px;
+        }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .filter-buttons {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .filter-buttons button {
+            padding: 10px 15px;
+            margin: 0 5px;
+            border: none;
+            background-color: #333;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .filter-buttons button:hover {
+            background-color: #575757;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .gallery img {
+            width: 100%;
+            max-width: 300px;
+            margin: 10px;
+            display: none;
+        }
+
+        .gallery img.show {
+            display: inline-block;
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="tiamokologo.jpg" alt="Tiamoko Leadership Center Logo"> 
+        </div>
+        <ul class="nav-links">
+            <li><a href="menu.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="service.html">Our Services</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="join.html">Join Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <h1>Gallery</h1>
+        
+        <div class="filter-buttons">
+            <button onclick="filterImages('all')">All</button>
+            <button onclick="filterImages('events')">Events</button>
+            <button onclick="filterImages('consulting')">Consulting</button>
+            <button onclick="filterImages('mentorship')">Mentorship</button>
+            <button onclick="filterImages('teambuilding')">Team Building</button>
+            <button onclick="filterImages('leadershiptraining')">Leadership Training</button>
+        </div>
+        
+        <div class="gallery">
+            <img src="tiamokologo.jpg" alt="Event 1" class="all events show">
+            <img src="background.png" alt="Event 2" class="all events show">
+            <img src="background.png" alt="Consulting 1" class="all consulting show">
+            <img src="background.png" alt="Consulting 2" class="all consulting show">
+            <img src="background.png" alt="Mentorship 1" class="all mentorship show">
+            <img src="background.png" alt="Mentorship 2" class="all mentorship show">
+            <img src="background.png" alt="Team Building 1" class="all teambuilding show">
+            <img src="background.png" alt="Team Building 2" class="all teambuilding show">
+            <img src="background.png" alt="Leadership Training 1" class="all leadershiptraining show">
+            <img src="background.png" alt="Leadership Training 2" class="all leadershiptraining show">
+        </div>
+    </div>
+    
+    <script>
+        function filterImages(category) {
+            var images = document.querySelectorAll('.gallery img');
+            if (category === 'all') {
+                images.forEach(img => img.classList.add('show'));
+            } else {
+                images.forEach(img => {
+                    if (img.classList.contains(category)) {
+                        img.classList.add('show');
+                    } else {
+                        img.classList.remove('show');
+                    }
+                });
+            }
+        }
+    </script>
+</body>
+</html>
