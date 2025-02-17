@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials - Tiamoko Leadership Centre</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .testimonial {
+            margin-bottom: 20px;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            opacity: 0;
+            transform: translateX(-50px);
+            animation: fadeIn 1s forwards;
+        }
+
+        .testimonial:last-child {
+            border-bottom: none;
+        }
+
+        .testimonial img {
+            border-radius: 50%;
+            height: 60px;
+            margin-right: 15px;
+        }
+
+        .star-rating {
+            color: #f39c12;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .testimonial:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+
+        .testimonial:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
+        .testimonial:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        .testimonial:nth-child(4) {
+            animation-delay: 0.8s;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Testimonials</h1>
+        
+        <div class="testimonial">
+            <img src="alfi.png" alt="Alfred Machinya">
+            <div>
+                <h3>Alfred Machinya</h3>
+                <p class="star-rating">⭐⭐⭐⭐⭐</p>
+                <p>"The Tiamoko Leadership Centre has transformed my life. The leadership training provided here is unparalleled. Highly recommended!"</p>
+            </div>
+        </div>
+        
+        <div class="testimonial">
+            <img src="jane_smith.jpg" alt="Gopolang Monnakgosi">
+            <div>
+                <h3>Gopolang Monnakgosi</h3>
+                <p class="star-rating">⭐⭐⭐⭐</p>
+                <p>"Great experience! The mentors are very supportive and the environment is conducive to learning and growth."</p>
+            </div>
+        </div>
+        
+        <div class="testimonial">
+            <img src="david_brown.jpg" alt="Olerato Tshosa">
+            <div>
+                <h3>Olerato Tshosa</h3>
+                <p class="star-rating">⭐⭐⭐⭐⭐</p>
+                <p>"A fantastic place to develop leadership skills. I've learned so much and made lasting connections."</p>
+            </div>
+        </div>
+        
+        <div class="testimonial">
+            <img src="mary_johnson.jpg" alt="Gosego Rasetshwane">
+            <div>
+                <h3>Gosego Rasetshwane</h3>
+                <p class="star-rating">⭐⭐⭐⭐⭐</p>
+                <p>"The training programs are very well-structured and comprehensive. Tiamoko Leadership Centre is a game-changer!"</p>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
