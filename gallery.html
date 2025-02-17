@@ -100,13 +100,76 @@
 
         .gallery img {
             width: 100%;
-            max-width: 300px;
+            max-width: 250px; /* Reduced size */
             margin: 10px;
             display: none;
+            border-radius: 8px; /* Added border radius */
+            transition: transform 0.3s; /* Added hover effect */
         }
 
         .gallery img.show {
             display: inline-block;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05); /* Hover effect to enlarge */
+        }
+
+        /* Styles for modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 60px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+
+        .close, .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -50px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            transition: 0.3s;
+            user-select: none;
+        }
+
+        .close {
+            top: 15px;
+            right: 35px;
+            font-size: 40px;
+            transform: translate(-50%, -50%);
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
+
+        .close:hover,
+        .prev:hover,
+        .next:hover {
+            color: #bbb;
         }
 
     </style>
@@ -140,20 +203,29 @@
         </div>
         
         <div class="gallery">
-            <img src="tiamokologo.jpg" alt="Event 1" class="all events show">
-            <img src="background.png" alt="Event 2" class="all events show">
-            <img src="background.png" alt="Consulting 1" class="all consulting show">
-            <img src="background.png" alt="Consulting 2" class="all consulting show">
-            <img src="background.png" alt="Mentorship 1" class="all mentorship show">
-            <img src="background.png" alt="Mentorship 2" class="all mentorship show">
-            <img src="background.png" alt="Team Building 1" class="all teambuilding show">
-            <img src="background.png" alt="Team Building 2" class="all teambuilding show">
-            <img src="background.png" alt="Leadership Training 1" class="all leadershiptraining show">
-            <img src="background.png" alt="Leadership Training 2" class="all leadershiptraining show">
+            <img src="tiamokologo.jpg" alt="Event 1" class="all events show" onclick="openModal(this)">
+            <img src="background.png" alt="Event 2" class="all events show" onclick="openModal(this)">
+            <img src="background.png" alt="Consulting 1" class="all consulting show" onclick="openModal(this)">
+            <img src="background.png" alt="Consulting 2" class="all consulting show" onclick="openModal(this)">
+            <img src="background.png" alt="Mentorship 1" class="all mentorship show" onclick="openModal(this)">
+            <img src="background.png" alt="Mentorship 2" class="all mentorship show" onclick="openModal(this)">
+            <img src="background.png" alt="Team Building 1" class="all teambuilding show" onclick="openModal(this)">
+            <img src="background.png" alt="Team Building 2" class="all teambuilding show" onclick="openModal(this)">
+            <img src="background.png" alt="Leadership Training 1" class="all leadershiptraining show" onclick="openModal(this)">
+            <img src="background.png" alt="Leadership Training 2" class="all leadershiptraining show" onclick="openModal(this)">
         </div>
     </div>
     
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <a class="prev" onclick="changeImage(-1)">&#10094;</a>
+        <a class="next" onclick="changeImage(1)">&#10095;</a>
+    </div>
+
     <script>
+        // Function to filter images
         function filterImages(category) {
             var images = document.querySelectorAll('.gallery img');
             if (category === 'all') {
@@ -167,6 +239,31 @@
                     }
                 });
             }
+        }
+
+        // Function to open modal
+        function openModal(element) {
+            var modal = document.getElementById("myModal");
+            var modalImg = document.getElementById("modalImage");
+            modal.style.display = "block";
+            modalImg.src = element.src;
+            modalImg.setAttribute("data-index", Array.from(document.querySelectorAll('.gallery img')).indexOf(element));
+        }
+
+        // Function to close modal
+        function closeModal() {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
+        }
+
+        // Function to change modal image
+        function changeImage(direction) {
+            var modalImg = document.getElementById("modalImage");
+            var images = Array.from(document.querySelectorAll('.gallery img.show'));
+            var currentIndex = parseInt(modalImg.getAttribute("data-index"));
+            var newIndex = (currentIndex + direction + images.length) % images.length;
+            modalImg.src = images[newIndex].src;
+            modalImg.setAttribute("data-index", newIndex);
         }
     </script>
 </body>
